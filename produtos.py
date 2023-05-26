@@ -47,9 +47,7 @@ def cadastrarProduto():
     '''
     try:
         cursor.execute(sql, (nome,preco))
-        print('paradinha1')
         conn.commit()
-        print('paradinha2')
         return jsonify({"mensagem":"produto inserido com sucesso"}), 201
     except:
         return "Erro ao inserir", 400

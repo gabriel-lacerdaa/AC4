@@ -3,7 +3,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/venda/produtos')
+@app.route('/produtos')
 def novaVenda():
     id = request.args.get("id")
     response = requests.get(f'http://localhost:5000/produtos/{id}')
